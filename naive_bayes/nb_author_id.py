@@ -29,6 +29,6 @@ features_train, features_test, labels_train, labels_test = preprocess()
 clt = GaussianNB()
 clt.fit(features_train, labels_train)
 clt.predict(features_test)
-print(clt.score(features_test, labels_test))
+print("The prediction score is {}".format(clt.score(features_test, labels_test)))
 
 #########################################################
