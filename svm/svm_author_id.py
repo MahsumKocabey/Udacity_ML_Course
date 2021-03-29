@@ -21,7 +21,9 @@ from sklearn.svm import SVC
 features_train, features_test, labels_train, labels_test = preprocess()
 
 
-
+# Use a small part of the train data to get a prediction in a shorter time.
+features_train = features_train[:int(len(features_train)/100)]
+labels_train = labels_train[:int(len(labels_train) / 100)]
 
 #########################################################
 ### your code goes here ###
